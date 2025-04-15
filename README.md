@@ -21,7 +21,7 @@
 
 ## Wymagania
 
-- Node.js w wersji **20 lub nowszej** (zalecane LTS)
+- Node.js w wersji **20 lub nowszej** (zalecane 20 LTS)
 - npm (instalowany razem z Node.js)
 - System operacyjny: Windows, Linux lub macOS (testowane głównie na Windows)
 
