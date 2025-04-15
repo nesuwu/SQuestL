@@ -370,7 +370,7 @@ const Mission = ({ mission, xp, streak, onResult }) => {
             setAwaitingRetry(false);
             setSqlInput('');
         } else if (awaitingRetry && (input === 'n' || input === 'N')) {
-            onResult(false);
+            onResult('skip');
         }
     });
 
@@ -429,7 +429,13 @@ const Game = () => {
     const [sabotagerRevealed, setSabotagerRevealed] = useState(false);
 
     const handleMenu = (choice) => {
-        if (choice === 'start') setScreen('intro');
+        if (choice === 'start') {
+            setXp(0);
+            setStreak(0);
+            setMissionIdx(0);
+            setSabotagerRevealed(false);
+            setScreen('intro');
+        }
         else if (choice === 'instrukcja') setScreen('instrukcja');
         else if (choice === 'exit') process.exit(0);
     };
