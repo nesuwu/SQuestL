@@ -1,33 +1,40 @@
 # SQ(uest)L
 
-Nowoczesna gra terminalowa do nauki SQL z fabułą, zbudowana w oparciu o [Ink](https://github.com/vadimdemedes/ink) (React dla CLI). Rozwiązuj zadania SQL, zdobywaj XP i odkrywaj historię!
+**SQ(uest)L** to nowoczesna, interaktywna gra terminalowa do nauki SQL z fabułą, stworzona przez **Nesu**. Gra została zbudowana w oparciu o [Ink](https://github.com/vadimdemedes/ink) (React dla CLI) i pozwala na rozwiązywanie zadań SQL, zdobywanie XP oraz odkrywanie historii sabotażu w cyberpunkowej firmie.
 
 ---
 
 ## Funkcje
 
-- Interaktywne "questy" SQL z natychmiastową informacją zwrotną
-- Edytor SQL z podświetlaniem składni w terminalu
-- Komendy: podpowiedź (`hint`), pominięcie (`skip`), wyjście (`exit`)
-- System XP i seria poprawnych odpowiedzi
-- Fabuła i komunikaty
-- Struktura odpowiedniej tabeli wyświetlana przy każdym zadaniu w ramach wizualizacji potrzebnych danych
+- **Interaktywne questy SQL** – rozwiązywanie zadań z natychmiastową informacją zwrotną.
+- **Edytor SQL z podświetlaniem składni** – wygodne pisanie zapytań bezpośrednio w terminalu.
+- **Komendy specjalne**:
+  - `hint` – podpowiedź do zadania,
+  - `skip` – pominięcie misji (kosztuje 5 XP),
+  - `exit` – zakończenie gry w dowolnym momencie.
+- **System XP i streaków** – zdobywaj punkty doświadczenia i buduj serię poprawnych odpowiedzi.
+- **Fabuła i komunikaty** – cyberpunkowa historia z odkrywaniem sabotażysty.
+- **Wizualizacja tabel** – przy każdym zadaniu wyświetlana jest struktura odpowiedniej tabeli, by łatwiej zrozumieć kontekst.
+- **Przyjazny interfejs** – obsługa klawiatury, czytelne komunikaty, kolorowe podświetlenia.
 
 ---
 
 ## Wymagania
 
-- Node.js w wersji 20 lub nowszej (zalecane LTS)
+- Node.js w wersji **20 lub nowszej** (zalecane LTS)
 - npm (instalowany razem z Node.js)
+- System operacyjny: Windows, Linux lub macOS (testowane głównie na Windows)
 
 ---
 
 ## Instalacja
 
-1. Sklonuj repozytorium lub pobierz pliki projektu.
-2. Przejdź do katalogu projektu w terminalu.
-3. Zainstaluj zależności:
-
+1. Sklonuj repozytorium lub pobierz pliki projektu:
+   ```sh
+   git clone https://github.com/nesu/squestl.git
+   cd squestl
+   ```
+2. Zainstaluj zależności:
    ```sh
    npm install
    ```
@@ -52,20 +59,27 @@ node --loader @esbuild-kit/esm-loader SQuestL.jsx
 
 ## Sterowanie
 
-- Na ekranie startowym za sterowanie odpowiadają strzałki na klawiaturze.
-- Wpisz odpowiedź SQL i naciśnij **Enter**, aby zatwierdzić.
-- Wpisz `hint`, aby uzyskać podpowiedź.
-- Wpisz `skip`, aby pominąć zadanie (XP -5).
-- Wpisz `exit`, aby zakończyć grę.
-- Po błędnej odpowiedzi: `y` – spróbuj ponownie, `n` – pomiń.
+- **Menu główne**: nawigacja strzałkami, wybór Enterem.
+- **Rozwiązywanie zadań**: wpisz odpowiedź SQL i zatwierdź Enterem.
+- **Podpowiedź**: wpisz `hint` i Enter.
+- **Pominięcie zadania**: wpisz `skip` (tracisz 5 XP).
+- **Wyjście z gry**: wpisz `exit`.
+- **Po błędnej odpowiedzi**: `y` – spróbuj ponownie, `n` – pomiń (tracisz 5 XP).
+
+---
+
+## Struktura projektu
+
+- **SQuestL.jsx** – cała logika gry, definicje misji, obsługa interfejsu i fabuły.
+- **README.md** – ten plik, szczegółowa dokumentacja.
+- **LICENSE** – licencja projektu (Apache License 2.0).
 
 ---
 
 ## Rozwój i edycja
 
-- Cała logika gry znajduje się w pliku `SQuestL.jsx`.
-- Zadania (misje) są zdefiniowane na początku pliku.
-- Struktura odpowiedniej tabeli wyświetlana jest przy każdym zadaniu.
+- Zadania (misje) są zdefiniowane na początku pliku `SQuestL.jsx` – możesz je łatwo edytować lub dodawać własne.
+- Struktura tabeli do każdego zadania jest wyświetlana automatycznie.
 - Wykorzystywane biblioteki: Ink, React, ink-select-input, ink-text-input.
 
 ---
@@ -73,15 +87,14 @@ node --loader @esbuild-kit/esm-loader SQuestL.jsx
 ## Rozwiązywanie problemów
 
 - Jeśli pojawiają się błędy związane z ESM lub loaderami, uruchom grę z flagą `--loader @esbuild-kit/esm-loader`.
-- Jeśli pojawiają się problemy z wyświetlaniem w terminalu, spróbuj użyć innego emulatora terminala.
+- Jeśli pojawiają się problemy z wyświetlaniem w terminalu, spróbuj użyć innego emulatora terminala (np. Windows Terminal, iTerm2, Alacritty).
 
 ---
 
 ## Licencja
 
-Projekt licencjonowany na licencji Apache License 2.0.  
-Pełną zawartość licencji znajdziesz w pliku `LICENSE`
+Projekt jest dostępny na licencji [Apache License 2.0](./LICENSE).
 
 ---
 
-Stworzone z ❤️ dzięki [Ink](https://github.com/vadimdemedes/ink).
+Stworzone z ❤️ przez **Nesu** dzięki [Ink](https://github.com/vadimdemedes/ink).
