@@ -31,8 +31,8 @@
 
 1. Sklonuj repozytorium lub pobierz pliki projektu:
    ```sh
-   git clone https://github.com/nesu/squestl.git
-   cd squestl
+   git clone https://github.com/nesu/SQuestL.git
+   cd SQuestL
    ```
 2. Zainstaluj zależności:
    ```sh
